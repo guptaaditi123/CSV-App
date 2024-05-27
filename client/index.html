@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV Data Display</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Data-Driven Application</h1>
+    <input type="file" id="csvFileInput" /><br /><br />
+    <button id="uploadButton" >Upload CSV</button>
+    <progress id="progressBar" value="0" max="100"></progress>
+    <span id="progressPercentage">0%</span>
+    <table>
+      <thead id="tableHeader"></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <div id="pagination"></div>
+    <br /><br />
+    <input
+      type="number"
+      id="basePrice"
+      placeholder="Base Price"
+      style="display: none"
+    /><br /><br />
+    <input
+      type="number"
+      id="pricePerCreditLine"
+      placeholder="Price per Credit Line"
+      style="display: none"
+    /><br /><br />
+    <input
+      type="number"
+      id="pricePerCreditScorePoint"
+      placeholder="Price per Credit Score Point"
+      style="display: none"
+    /><br /><br />
+    <button id="calculateButton">Calculate Prices</button>
+    <ul id="pricingList"></ul>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
